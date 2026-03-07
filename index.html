@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida Japonesa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* MENU PRETO */
+        header {
+            background-color: black;
+            padding: 15px 0;
+            width: 100%;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .menu a {
+            color: #999;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+            transition: color 0.2s;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            color: white;
+        }
+
+        /* CONTEÚDO PRINCIPAL COM IMAGEM DE FUNDO */
+        .hero {
+            flex: 1;
+            background-image: url('https://images.pexels.com/photos/7717542/pexels-photo-7717542.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+            padding: 40px 5%;
+        }
+
+        /* OVERLAY ESCURO */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        /* CAIXA DE TEXTO SOBRE A IMAGEM */
+        .conteudo {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+
+        h1 {
+            font-size: 80px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 22px;
+            color: white;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .btn-saber-mais {
+            display: inline-block;
+            background-color: transparent;
+            color: white;
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 15px 50px;
+            border: 3px solid white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Times New Roman', Times, serif;
+            transition: all 0.3s;
+        }
+
+        .btn-saber-mais:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        /* RODAPÉ PRETO */
+        footer {
+            background-color: black;
+            color: #666;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 800px) {
+            h1 {
+                font-size: 50px;
+            }
+            p {
+                font-size: 18px;
+            }
+            .btn-saber-mais {
+                font-size: 22px;
+                padding: 12px 35px;
+                border-width: 2px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 40px;
+            }
+            .btn-saber-mais {
+                font-size: 20px;
+                padding: 10px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a href="index.html" class="active">INÍCIO</a>
+            <a href="historia.html">HISTÓRIA</a>
+            <a href="tradicao.html">TRADIÇÃO</a>
+            <a href="preparo.html">PREPARO</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="conteudo">
+            <h1>COMIDA JAPONESA</h1>
+            <p>
+                Descubra A Alma Da Culinária Japonesa Em Um Espaço Dedicado À Sua História, 
+                Tradição E Preparo. Viaje Pelas Origens Milenares Que Moldaram Essa Gastronomia, 
+                Compreenda A Filosofia E Os Rituais Que Envolvem Cada Refeição E Aprenda Os 
+                Segredos Do Preparo Autêntico, Onde O Respeito Aos Ingredientes E A Precisão 
+                Nas Técnicas Transformam A Comida Em Verdadeira Arte.
+            </p>
+            <a href="historia.html" class="btn-saber-mais">SABER MAIS</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 COMIDA JAPONESA</p>
+    </footer>
+
+   
+</body>
+</html>

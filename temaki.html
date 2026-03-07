@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temaki · Comida Japonesa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #4a4a4a;
+        }
+
+        header {
+            background-color: black;
+            padding: 15px 0;
+            width: 100%;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .menu a {
+            color: #999;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            color: white;
+        }
+
+        .conteudo-receita {
+            flex: 1;
+            max-width: 900px;
+            width: 90%;
+            margin: 40px auto;
+            background-color: rgba(0,0,0,0.6);
+            padding: 40px;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            border-bottom: 3px solid white;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin: 25px 0 15px;
+            color: #ffcc99;
+        }
+
+        ul, ol {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: black;
+            color: #666;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 26px;
+            }
+            ul, ol {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <div class="menu">
+            <a href="index.html">INÍCIO</a>
+            <a href="historia.html">HISTÓRIA</a>
+            <a href="tradicao.html" class="active">TRADIÇÃO</a>
+            <a href="preparo.html">PREPARO</a>
+        </div>
+    </header>
+
+    <div class="conteudo-receita">
+        <h1>Temaki</h1>
+        <h2>Ingredientes</h2>
+        <ul>
+            <li>Arroz para sushi cozido</li>
+            <li>Folhas de nori</li>
+            <li>Salmão fresco em tiras</li>
+            <li>Cream cheese</li>
+            <li>Pepino em tiras</li>
+            <li>Shoyu para acompanhar</li>
+        </ul>
+        <h2>Modo de preparo</h2>
+        <ol>
+            <li>Coloque uma folha de nori sobre a mão (parte brilhante para baixo).</li>
+            <li>Com as mãos úmidas, espalhe uma camada de arroz sobre o nori, deixando uma borda superior livre.</li>
+            <li>No centro, coloque tiras de salmão, cream cheese e pepino.</li>
+            <li>Enrole em formato de cone, começando de uma ponta até a outra.</li>
+            <li>Sirva com shoyu e wasabi a gosto.</li>
+        </ol>
+    </div>
+
+    <footer>
+        <p>© 2025 COMIDA JAPONESA</p>
+    </footer>
+</body>
+</html>

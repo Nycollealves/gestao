@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradição · Comida Japonesa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* MENU PRETO (funcional) */
+        header {
+            background-color: black;
+            padding: 15px 0;
+            width: 100%;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .menu a {
+            color: #999;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+            transition: color 0.2s;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            color: white;
+        }
+
+        /* LAYOUT PRINCIPAL: IMAGEM ESQUERDA + TEXTO DIREITA */
+        .conteudo-principal {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            flex: 1; /* ocupa o espaço entre menu e rodapé */
+        }
+
+        /* LADO ESQUERDO - IMAGEM (50% da largura) */
+        .imagem-lado {
+            width: 50%;
+            background-image: url('https://images.pexels.com/photos/8951563/pexels-photo-8951563.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* LADO DIREITO - ABA COM TEXTO (50% da largura) */
+        .texto-lado {
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.7); /* fundo escuro semitransparente */
+            color: white;
+            padding: 60px 50px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            backdrop-filter: blur(2px);
+        }
+
+        h1 {
+            font-size: 70px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 20px;
+            color: white;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* RODAPÉ PRETO */
+        footer {
+            background-color: black;
+            color: #666;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 900px) {
+            .conteudo-principal {
+                flex-direction: column;
+            }
+            .imagem-lado {
+                width: 100%;
+                height: 400px;
+            }
+            .texto-lado {
+                width: 100%;
+                padding: 40px 30px;
+            }
+            h1 {
+                font-size: 50px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a href="index.html">INÍCIO</a>
+            <a href="historia.html">HISTÓRIA</a>
+            <a href="tradicao.html" class="active">TRADIÇÃO</a>
+            <a href="preparo.html">PREPARO</a>
+        </div>
+    </header>
+
+    <div class="conteudo-principal">
+        <!-- LADO ESQUERDO: IMAGEM -->
+        <div class="imagem-lado"></div>
+
+        <!-- LADO DIREITO: TEXTO SOBRE TRADIÇÃO -->
+        <div class="texto-lado">
+            <h1>TRADIÇÃO</h1>
+            <p>A tradição alimentar japonesa é muito mais que um conjunto de receitas — é uma expressão cultural profundamente enraizada no respeito à natureza, na sazonalidade e na estética. Cada refeição é pensada como uma experiência equilibrada, onde cores, texturas e sabores se complementam em perfeita harmonia.</p>
+            <p>Um dos pilares dessa tradição é o conceito de ichiju-sansai (uma sopa, três acompanhamentos), que estrutura as refeições cotidianas desde o período Edo. Arroz branco, missô shiru (sopa de missô), peixe grelhado, vegetais cozidos e picles (tsukemono) formam a base de uma alimentação simples, mas nutricionalmente completa.</p>
+            <p>A sazonalidade (shun) é sagrada: os ingredientes são consumidos no auge de seu frescor, celebrando cada estação. Flores de cerejeira na primavera, berinjelas no verão, cogumelos no outono e raízes no inverno — a natureza dita o cardápio.</p>
+            <p>A apresentação também carrega séculos de tradição. A cerâmica, o arranjo dos alimentos e até os utensílios são escolhidos para valorizar o alimento e transmitir hospitalidade (omotenashi). Comer no Japão é alimentar os olhos antes do paladar.</p>
+            <p>Mesmo com a modernidade, essas tradições permanecem vivas — nas casas, nos restaurantes e nas festividades — mantendo viva a alma de um povo que enxerga na comida um reflexo de sua história e espiritualidade.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 COMIDA JAPONESA</p>
+    </footer>
+</body>
+</html>
